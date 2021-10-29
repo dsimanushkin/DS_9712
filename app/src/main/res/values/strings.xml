@@ -1,0 +1,181 @@
+<resources>
+    <string name="app_name">DS_9712</string>
+    <string name="AuthNavHost">AuthNavHost</string>
+
+    <string name="error_none">None</string>
+
+    <!-- Launcher Fragment -->
+    <string name="launcher_fragment_log_in_text_button">Log In</string>
+    <string name="launcher_fragment_dont_have_an_account_text">You need an account, click \nhere to sign up.</string>
+
+    <!-- Log In Fragment -->
+    <string name="log_in_fragment_title">Welcome Back!</string>
+    <string name="log_in_fragment_description">Sign in to continue</string>
+    <string name="log_in_fragment_sign_in_text_button">Log in</string>
+    <string name="log_in_fragment_username_input_hint">Username</string>
+    <string name="log_in_fragment_password_input_hint">Password</string>
+    <string name="log_in_fragment_forgot_password_text_button">Forgot your password?</string>
+    <string name="log_in_fragment_dont_have_an_account_text">Don\'t have an account?</string>
+    <string name="log_in_fragment_sign_up_text_button">Sign up here.</string>
+
+    <string name="log_in_fragment_error_empty_username_field">Username field can not be empty</string>
+    <string name="log_in_fragment_error_empty_password_field">Password field can not be empty</string>
+
+    <!-- Sign Up Step One Fragment -->
+    <string name="sign_up_step_one_fragment_title">Sign Up</string>
+    <string name="sign_up_step_one_fragment_description">For the beginning we have to get some information about you. Please enter your full name and find a good username</string>
+    <string name="sign_up_step_one_fragment_full_name_edit_text_hint">Full Name</string>
+    <string name="sign_up_step_one_fragment_username_edit_text_hint">Username</string>
+    <string name="sign_up_step_one_fragment_next_text_button">Next</string>
+    <string name="sign_up_step_one_fragment_already_have_an_account_text">Already have an account?</string>
+    <string name="sign_up_step_one_fragment_sign_in_text_button">Sign in here.</string>
+
+    <string name="sign_up_step_one_fragment_error_empty_full_name_field">Full Name field can not be empty</string>
+    <string name="sign_up_step_one_fragment_error_empty_username_field">Username field can not be empty</string>
+
+    <!-- Sign Up Step Two Fragment -->
+    <string name="sign_up_step_two_fragment_title">Sign Up</string>
+    <string name="sign_up_step_two_fragment_description">Now we need your email address so we can confirm that you are a real human and contact with you in case you forget your password</string>
+    <string name="sign_up_step_two_fragment_email_edit_text_hint">Email</string>
+    <string name="sign_up_step_two_fragment_next_text_button">Next</string>
+
+    <string name="sign_up_step_two_fragment_error_empty_email_field">Email field can not be empty</string>
+
+    <!-- Sign Up Step Three Fragment -->
+    <string name="sign_up_step_three_fragment_title">Sign Up</string>
+    <string name="sign_up_step_three_fragment_description">To secure your account please choose a password. Make sure that it is unique, contains at least 8 characters. To secure your account better use uppercase and lowercase letters, numbers and special characters</string>
+    <string name="sign_up_step_three_fragment_password_edit_text_hint">Password</string>
+    <string name="sign_up_step_three_fragment_confirm_password_edit_text_hint">Confirm Password</string>
+    <string name="sign_up_step_three_fragment_next_text_button">Next</string>
+
+    <string name="sign_up_step_three_fragment_error_empty_password_field">Password field can not be empty</string>
+    <string name="sign_up_step_three_fragment_error_passwords_do_not_match">Passwords do not match</string>
+
+    <!-- Sign Up Step Four Fragment -->
+    <string name="sign_up_step_four_fragment_title">Sign Up</string>
+    <string name="sign_up_step_four_fragment_description">Last piece of information that we need is your date of birth to correctly provide content for you</string>
+    <string name="sign_up_step_four_fragment_date_picker_title_text">Your Date of Birth</string>
+    <string name="sign_up_step_four_fragment_next_text_button">Next</string>
+
+    <!-- Sign Up Step Five Fragment -->
+    <string name="sign_up_step_five_fragment_title">PayPal</string>
+    <string name="sign_up_step_five_fragment_description">In order for us to make a payouts to you we need to have your PayPal account on file. We are not using it anywhere else only to pay you a rewards</string>
+    <string name="sign_up_step_five_fragment_email_edit_text_hint">PayPal Account</string>
+    <string name="sign_up_step_five_fragment_next_text_button">Next</string>
+
+    <string name="sign_up_step_five_fragment_error_empty_email_field">PayPal Username field can not be empty</string>
+
+    <!-- Forgot Password Fragment (Sign In) -->
+    <string name="forgot_password_fragment_title">Forgot Password</string>
+    <string name="forgot_password_fragment_description">Enter your username associated with your account and we will email a link to reset your password</string>
+    <string name="forgot_password_fragment_username_edit_text_hint">Username</string>
+    <string name="forgot_password_fragment_submit_text_button">Submit</string>
+
+    <string name="forgot_password_fragment_error_empty_username_field">Username field can not be empty</string>
+
+    <!-- Agreement Fragment -->
+    <string name="agreement_fragment_title">Agreement</string>
+    <string name="agreement_fragment_description">By pressing "ACCEPT" button you confirm that you give us permission to use your personal information in our application that you provided on previous screen and agreeing with our Privacy Policy and Terms of Use. If you do not want us to use your personal information, please log out</string>
+    <string name="agreement_fragment_terms_of_use_text_button">Terms of Use</string>
+    <string name="agreement_fragment_privacy_policy_text_button">Privacy Policy</string>
+    <string name="agreement_fragment_accept_text_button">Accept</string>
+    <string name="agreement_fragment_decline_text_button">Decline</string>
+
+    <!-- Terms Of Use Fragment -->
+    <string name="terms_of_use_fragment_title">Terms of Use</string>
+    <string name="terms_of_use_fragment_description">Last updated: April 2020</string>
+
+    <!-- Privacy Policy Fragment -->
+    <string name="privacy_policy_fragment_title">Privacy Policy</string>
+    <string name="privacy_policy_fragment_description">Last updated: April 2020</string>
+
+    <!-- Calendar Months -->
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <!-- No Internet Connection Message -->
+    <string name="no_internet_connection_title">No network connection</string>
+    <string name="no_internet_connection_description">No internet connection. Connect to the internet and try again.</string>
+    <string name="no_internet_connection_refresh_button_text">Refresh</string>
+
+
+
+
+    <!-- API Codes -->
+    <string name="unable_to_complete_this_request">Unable to complete this request. \nPlease try again later&#8230;</string>
+    <string name="you_should_be_at_least_18_years_old">You should be at least 18 years old.</string>
+
+    <string name="full_name_is_required">Full Name is required.</string>
+    <string name="full_name_field_is_too_short">Full Name field is too short.</string>
+    <string name="full_name_field_is_too_long">Full Name field is too long.</string>
+
+    <string name="username_is_required">Username is required.</string>
+    <string name="this_username_already_in_use">This Username already in use.</string>
+    <string name="username_field_is_too_short">Username field is too short.</string>
+    <string name="username_field_is_too_long">Username field is too long.</string>
+    <string name="username_is_available">Username is available.</string>
+
+    <string name="email_is_required">Email is required.</string>
+    <string name="this_email_already_in_use">This Email already in use.</string>
+    <string name="invalid_email_format">Invalid Email format.</string>
+    <string name="email_is_available">Email is available.</string>
+
+    <string name="unknown_error">Unknown Error</string>
+    <string name="generic_success">Success</string>
+    <string name="generic_error">Error</string>
+    <string name="error_save_auth_token">Error saving authentication token.\nTry restarting the app.</string>
+    <string name="error_save_account_properties">Error saving account properties.\nTry restarting the app.</string>
+    <string name="response_check_previous_auth_user_done">Done checking for previously authenticated user.</string>
+
+    <string name="password_field_required">Password field required.</string>
+    <string name="password_is_too_short">Password is too short.</string>
+    <string name="password_is_valid">Password is valid.</string>
+
+    <string name="date_of_birth_field_required">Date Of Birth field required.</string>
+    <string name="you_should_be_at_least_14_years_old">You should be at least 14 years old.</string>
+    <string name="date_of_birth_is_valid">Date of birth is valid.</string>
+
+    <string name="successfully_registered_new_user">Successfully registered new user.</string>
+    <string name="successfully_retrieved_account_properties">Successfully retrieved account properties.</string>
+    <string name="agreement_accepted_successfully_and_verification_code_sent">Agreement accepted successfully and verification code sent.</string>
+    <string name="agreement_accepted_successfully_and_verification_code_not_sent">Agreement accepted successfully and verification code not sent.</string>
+    <string name="successfully_retrieved_account_verification_fields">Successfully retrieved account verification fields.</string>
+    <string name="account_deleted_successfully">Account deleted successfully.</string>
+    <string name="error_deleting_account">Error deleting account.</string>
+    <string name="verification_code_has_been_sent">Verification code has been sent.</string>
+    <string name="unable_to_send_verification_email_due_to_reached_daily_limit">Unable to send verification email due to reached daily limit.</string>
+    <string name="account_has_been_already_verified">Account has been already verified.</string>
+    <string name="account_with_this_credentials_not_found">Account with this credentials not found.</string>
+    <string name="user_successfully_signed_in">User successfully signed in.</string>
+    <string name="email_updated_successfully">Email updated successfully.</string>
+    <string name="password_is_incorrect">Password is incorrect.</string>
+    <string name="email_could_be_changed_only_once_a_day">Email could be changed only once a day.</string>
+    <string name="agreement_has_already_been_accepted">Agreement has already been accepted.</string>
+    <string name="email_changed_successfully_and_new_verification_code_has_been_sent">Email changed successfully and new verification code has been sent.</string>
+
+    <string name="email_should_be_verified_before_resetting_password">Email should be verified before resetting password.</string>
+    <string name="reset_password_email_has_been_sent">Reset password email has been sent.</string>
+    <string name="unable_to_send_reset_password_email_due_to_reached_daily_limit">Unable to send reset password email due to reached daily limit.</string>
+    <string name="verification_code_is_valid">Verification code is valid.</string>
+    <string name="verification_code_is_invalid">Verification code is invalid.</string>
+    <string name="verification_code_required">Verification code required.</string>
+    <string name="email_has_been_already_verified">Email has been already verified.</string>
+
+    <string name="paypal_account_field_required">PayPal Account field required.</string>
+    <string name="paypal_account_field_is_valid">PayPal Account is valid.</string>
+
+    <string name="invalid_authorization_token">Invalid authorization token.</string>
+    <string name="record_not_found">Record not found.</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main theme colors -->
+    <color name="colorPrimary">#080808</color>
+    <color name="colorPrimaryDark">#080808</color>
+    <color name="colorAccent">#080808</color>
+    <color name="colorNavigationBar">#080808</color>
+
+    <color name="app_main_color">#4E9D9F</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparent_25">#40FFFFFF</color>
+    <color name="white_transparent_40">#66ffffff</color>
+    <color name="white_transparent_50">#80ffffff</color>
+    <color name="white_transparent_80">#CCFFFFFF</color>
+    <color name="white_transparent_90">#E6FFFFFF</color>
+    <color name="white_transparent_95">#F2FFFFFF</color>
+
+    <color name="red">#FF0000</color>
+    <color name="error_red">#ED4337</color>
+
+    <color name="black">#000000</color>
+    <color name="black_transparent_5">#0D000000</color>
+    <color name="black_transparent_10">#1A000000</color>
+    <color name="black_transparent_15">#26000000</color>
+    <color name="black_transparent_25">#40000000</color>
+    <color name="black_transparent_35">#66000000</color>
+    <color name="black_transparent_90">#E6000000</color>
+
+    <color name="dark_text_color">#686868</color>
+
+    <color name="edit_text_highlight_color">#26363A46</color>
+</resources>
