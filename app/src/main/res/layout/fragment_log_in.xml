@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Background -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/auth_screen_background"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <!-- Main content -->
+
+    <RelativeLayout
+        android:id="@+id/log_in_page_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/log_in_page_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/log_in_page_back_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="4dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                tools:ignore="ContentDescription" />
+
+            <ProgressBar
+                android:id="@+id/log_in_page_loading_progress_bar"
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:visibility="invisible"
+                android:layout_alignParentEnd="true"
+                android:indeterminateDrawable="@drawable/progress_bar"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/log_in_page_toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/log_in_fragment_title"
+                    android:textSize="40sp"
+                    android:fontFamily="@font/vt323_regular"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="center_horizontal"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/log_in_page_text_input_layout_username"
+                    android:theme="@style/EditTextThemeOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginTop="60dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/log_in_page_edit_text_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:hint="@string/log_in_fragment_username_input_hint"
+                        android:backgroundTint="@color/white"
+                        android:textColorHighlight="@color/edit_text_highlight_color"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/vt323_regular"
+                        android:textSize="22sp"
+                        android:inputType="text"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/log_in_page_text_input_layout_password"
+                    android:theme="@style/EditTextThemeOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="40dp"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/ErrorTextAppearance"
+                    app:helperTextTextAppearance="@style/HelperTextAppearance"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/log_in_page_edit_text_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:hint="@string/log_in_fragment_password_input_hint"
+                        android:backgroundTint="@color/dark_text_color"
+                        android:textColorHighlight="@color/edit_text_highlight_color"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/vt323_regular"
+                        android:textSize="22sp"
+                        android:inputType="textPassword"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/log_in_page_login_button"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/auth_border_button_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="35dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/log_in_fragment_sign_in_text_button"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/vt323_regular"
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="40dp">
+
+                    <TextView
+                        android:id="@+id/log_in_page_sign_up_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/vt323_regular"
+                        android:text="@string/log_in_fragment_dont_have_an_account_text"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

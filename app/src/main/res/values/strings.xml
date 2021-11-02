@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DS_9712</string>
     <string name="AuthNavHost">AuthNavHost</string>
+    <string name="MainNavHost">MainNavHost</string>
 
     <string name="error_none">None</string>
 
@@ -9,21 +10,18 @@
     <string name="launcher_fragment_dont_have_an_account_text">You need an account, click \nhere to sign up.</string>
 
     <!-- Log In Fragment -->
-    <string name="log_in_fragment_title">Welcome Back!</string>
-    <string name="log_in_fragment_description">Sign in to continue</string>
+    <string name="log_in_fragment_title">Sign in to continue</string>
     <string name="log_in_fragment_sign_in_text_button">Log in</string>
     <string name="log_in_fragment_username_input_hint">Username</string>
     <string name="log_in_fragment_password_input_hint">Password</string>
-    <string name="log_in_fragment_forgot_password_text_button">Forgot your password?</string>
-    <string name="log_in_fragment_dont_have_an_account_text">Don\'t have an account?</string>
-    <string name="log_in_fragment_sign_up_text_button">Sign up here.</string>
+    <string name="log_in_fragment_dont_have_an_account_text">You need an account, click \nhere to sign up.</string>
 
     <string name="log_in_fragment_error_empty_username_field">Username field can not be empty</string>
     <string name="log_in_fragment_error_empty_password_field">Password field can not be empty</string>
 
     <!-- Sign Up Step One Fragment -->
     <string name="sign_up_step_one_fragment_title">Sign Up</string>
-    <string name="sign_up_step_one_fragment_description">For the beginning we have to get some information about you. Please enter your full name and find a good username</string>
+    <string name="sign_up_step_one_fragment_description">Please enter your full name and username</string>
     <string name="sign_up_step_one_fragment_full_name_edit_text_hint">Full Name</string>
     <string name="sign_up_step_one_fragment_username_edit_text_hint">Username</string>
     <string name="sign_up_step_one_fragment_next_text_button">Next</string>
@@ -35,7 +33,7 @@
 
     <!-- Sign Up Step Two Fragment -->
     <string name="sign_up_step_two_fragment_title">Sign Up</string>
-    <string name="sign_up_step_two_fragment_description">Now we need your email address so we can confirm that you are a real human and contact with you in case you forget your password</string>
+    <string name="sign_up_step_two_fragment_description">Please enter you email</string>
     <string name="sign_up_step_two_fragment_email_edit_text_hint">Email</string>
     <string name="sign_up_step_two_fragment_next_text_button">Next</string>
 
@@ -43,7 +41,7 @@
 
     <!-- Sign Up Step Three Fragment -->
     <string name="sign_up_step_three_fragment_title">Sign Up</string>
-    <string name="sign_up_step_three_fragment_description">To secure your account please choose a password. Make sure that it is unique, contains at least 8 characters. To secure your account better use uppercase and lowercase letters, numbers and special characters</string>
+    <string name="sign_up_step_three_fragment_description">Please enter your password</string>
     <string name="sign_up_step_three_fragment_password_edit_text_hint">Password</string>
     <string name="sign_up_step_three_fragment_confirm_password_edit_text_hint">Confirm Password</string>
     <string name="sign_up_step_three_fragment_next_text_button">Next</string>
@@ -53,7 +51,7 @@
 
     <!-- Sign Up Step Four Fragment -->
     <string name="sign_up_step_four_fragment_title">Sign Up</string>
-    <string name="sign_up_step_four_fragment_description">Last piece of information that we need is your date of birth to correctly provide content for you</string>
+    <string name="sign_up_step_four_fragment_description">Please enter your DOB. Note: only users who 18 years or older can create an account</string>
     <string name="sign_up_step_four_fragment_date_picker_title_text">Your Date of Birth</string>
     <string name="sign_up_step_four_fragment_next_text_button">Next</string>
 
@@ -75,7 +73,7 @@
 
     <!-- Agreement Fragment -->
     <string name="agreement_fragment_title">Agreement</string>
-    <string name="agreement_fragment_description">By pressing "ACCEPT" button you confirm that you give us permission to use your personal information in our application that you provided on previous screen and agreeing with our Privacy Policy and Terms of Use. If you do not want us to use your personal information, please log out</string>
+    <string name="agreement_fragment_description">Please read Terms of Use and Privacy Policy carefully. If you agree with it continue with registration otherwise click decline.</string>
     <string name="agreement_fragment_terms_of_use_text_button">Terms of Use</string>
     <string name="agreement_fragment_privacy_policy_text_button">Privacy Policy</string>
     <string name="agreement_fragment_accept_text_button">Accept</string>
@@ -88,6 +86,35 @@
     <!-- Privacy Policy Fragment -->
     <string name="privacy_policy_fragment_title">Privacy Policy</string>
     <string name="privacy_policy_fragment_description">Last updated: April 2020</string>
+
+    <!-- Verify Email Fragment (Auth) -->
+    <string name="verify_email_fragment_title">Verify Email Address</string>
+    <string name="verify_email_fragment_description">Verification code has been sent on your email. You should receive it within 5 &#8211; 10 minutes. Don’t forget to check spam.</string>
+    <string name="verify_email_fragment_resend_text_button">Resend verification code</string>
+    <string name="verify_email_fragment_change_email_text_button">Change email address</string>
+
+    <!-- Change Email Address Fragment (Auth) -->
+    <string name="change_email_address_fragment_title">Email Address</string>
+    <string name="change_email_address_fragment_description">Enter correct email address in the field below. We will send verification email on this address.</string>
+    <string name="change_email_address_fragment_email_edit_text_hint">Email</string>
+    <string name="change_email_address_fragment_password_edit_text_hint">Password</string>
+    <string name="change_email_address_fragment_submit_text_button">Submit</string>
+
+    <string name="change_email_address_fragment_error_empty_email_field">Email field can not be empty</string>
+    <string name="change_email_address_fragment_error_empty_password_field">Password field can not be empty</string>
+
+    <!-- Intro -->
+    <string name="intro_page_next_text_button">Next</string>
+    <string name="intro_page_finish_text_button">Got it!</string>
+
+    <string name="intro_page_slide_1_title">Hello!</string>
+    <string name="intro_page_slide_1_description">Darkness is not the end&#8230;</string>
+    <string name="intro_page_slide_2_description">And not the beginning&#8230;</string>
+    <string name="intro_page_slide_3_description">It is something in between</string>
+    <string name="intro_page_slide_4_description">We have something for you&#8230;</string>
+    <string name="intro_page_slide_5_description">But you need to prove that you are the one who deserves our attention</string>
+    <string name="intro_page_slide_6_description">Get to the end first and you will find us!</string>
+    <string name="intro_page_slide_6_signature">Goodluck, \nDS_9712</string>
 
     <!-- Calendar Months -->
     <string-array name="months">
@@ -115,7 +142,6 @@
 
     <!-- API Codes -->
     <string name="unable_to_complete_this_request">Unable to complete this request. \nPlease try again later&#8230;</string>
-    <string name="you_should_be_at_least_18_years_old">You should be at least 18 years old.</string>
 
     <string name="full_name_is_required">Full Name is required.</string>
     <string name="full_name_field_is_too_short">Full Name field is too short.</string>
@@ -144,7 +170,7 @@
     <string name="password_is_valid">Password is valid.</string>
 
     <string name="date_of_birth_field_required">Date Of Birth field required.</string>
-    <string name="you_should_be_at_least_14_years_old">You should be at least 14 years old.</string>
+    <string name="you_should_be_at_least_18_years_old">You should be at least 18 years old.</string>
     <string name="date_of_birth_is_valid">Date of birth is valid.</string>
 
     <string name="successfully_registered_new_user">Successfully registered new user.</string>

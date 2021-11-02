@@ -12,7 +12,7 @@
     <style name="AppThemeWhite" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/black_transparent_25</item>
-        <item name="colorAccent">@color/app_main_color</item>
+        <item name="colorAccent">@color/white</item>
         <item name="android:navigationBarColor">@color/black_transparent_25</item>
     </style>
 
@@ -45,20 +45,20 @@
     </style>
 
     <style name="EditTextThemeOverlay" parent="ThemeOverlay.AppCompat">
-        <item name="colorAccent">@color/app_main_color</item>
+        <item name="colorAccent">@color/white</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
         <item name="textAppearanceCaption">@style/TextAppearance.App.Caption</item>
     </style>
 
     <style name="ErrorTextAppearance" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/red</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold|italic</item>
     </style>
 
     <style name="HelperTextAppearance" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/error_red</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="fontFamily">@font/vt323_regular</item>
     </style>
 
@@ -78,8 +78,8 @@
     </style>
 
     <style name="NumberPickerStyle">
-        <item name="colorControlNormal">@color/app_main_color</item>
-        <item name="android:textColorPrimary">@color/dark_text_color</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
     </style>
 
     <style name="BottomNavigationViewTextStyle">

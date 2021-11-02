@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Background -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/auth_screen_background"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <!-- Main content -->
+
+    <RelativeLayout
+        android:id="@+id/sign_up_name_username_page_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/sign_up_name_username_page_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/sign_up_name_username_page_back_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="4dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                tools:ignore="ContentDescription" />
+
+            <ProgressBar
+                android:id="@+id/sign_up_name_username_page_loading_progress_bar"
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:visibility="invisible"
+                android:layout_alignParentEnd="true"
+                android:indeterminateDrawable="@drawable/progress_bar"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_up_name_username_page_toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_up_step_one_fragment_title"
+                    android:textSize="40sp"
+                    android:fontFamily="@font/vt323_regular"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_up_step_one_fragment_description"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/vt323_regular"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="26dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sign_up_name_username_page_text_input_layout_full_name"
+                    android:theme="@style/EditTextThemeOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginTop="60dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sign_up_name_username_page_edit_text_full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:hint="@string/sign_up_step_one_fragment_full_name_edit_text_hint"
+                        android:backgroundTint="@color/white"
+                        android:textColorHighlight="@color/edit_text_highlight_color"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/vt323_regular"
+                        android:textSize="22sp"
+                        android:inputType="text"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sign_up_name_username_page_text_input_layout_username"
+                    android:theme="@style/EditTextThemeOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginTop="20dp"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/ErrorTextAppearance"
+                    app:helperTextTextAppearance="@style/HelperTextAppearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/sign_up_name_username_page_edit_text_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:hint="@string/sign_up_step_one_fragment_username_edit_text_hint"
+                        android:backgroundTint="@color/white"
+                        android:textColorHighlight="@color/edit_text_highlight_color"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/vt323_regular"
+                        android:textSize="22sp"
+                        android:inputType="text"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sign_up_name_username_page_next_button"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/auth_border_button_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_up_step_one_fragment_next_text_button"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/vt323_regular"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/vt323_regular"
+                        android:text="@string/sign_up_step_one_fragment_already_have_an_account_text"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/sign_up_name_username_page_sign_in_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/vt323_regular"
+                        android:text="@string/sign_up_step_one_fragment_sign_in_text_button"
+                        android:layout_marginStart="5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

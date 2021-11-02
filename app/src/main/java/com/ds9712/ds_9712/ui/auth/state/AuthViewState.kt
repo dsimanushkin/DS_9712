@@ -13,12 +13,11 @@ data class AuthViewState(
     var authToken: AuthToken? = null,
     var accountStatus: AccountStatus? = null,
     var loginFields: LoginFields? = null,
-    var signUpFields: SignUpFields? = null,
-    var forgotPasswordFields: ForgotPasswordFields? = null,
     var signUpStepOneFields: SignUpStepOneFields? = null,
     var signUpStepTwoFields: SignUpStepTwoFields? = null,
     var signUpStepThreeFields: SignUpStepThreeFields? = null,
-    var signUpStepFourFields: SignUpStepFourFields? = null
+    var signUpFields: SignUpFields? = null,
+    var changeEmailAddressFields: ChangeEmailAddressFields? = null,
 ): Parcelable
 
 @Parcelize
@@ -45,58 +44,6 @@ data class LoginFields(
             loginUsername.isNullOrEmpty() -> LoginError.mustFillUsernameField(application)
             loginPassword.isNullOrEmpty() -> LoginError.mustFillPasswordField(application)
             else -> LoginError.none(application)
-        }
-    }
-}
-
-@Parcelize
-data class ForgotPasswordFields(
-    var forgotPasswordUsername: String? = null
-): Parcelable {
-    class ForgotPasswordError {
-        companion object {
-            fun mustFillUsernameField(application: Application): String {
-                return application.getString(R.string.forgot_password_fragment_error_empty_username_field)
-            }
-            fun none(application: Application): String {
-                return application.getString(R.string.error_none)
-            }
-        }
-    }
-
-    fun isValidForSubmission(application: Application): String {
-        return when {
-            forgotPasswordUsername.isNullOrEmpty() -> ForgotPasswordError.mustFillUsernameField(application)
-            else -> ForgotPasswordError.none(application)
-        }
-    }
-}
-
-@Parcelize
-data class SignUpFields(
-    var fullName: String? = null,
-    var username: String? = null,
-    var email: String? = null,
-    var password: String? = null,
-    var dateOfBirth: Calendar? = null,
-    var payPalUsername: String? = null
-): Parcelable {
-    class SignUpError {
-        companion object {
-            fun mustFillPayPalUsernameField(application: Application): String {
-                return application.getString(R.string.sign_up_step_five_fragment_error_empty_email_field)
-            }
-            fun none(application: Application): String {
-                return application.getString(R.string.error_none)
-            }
-        }
-    }
-
-    fun isValidForSubmission(application: Application): String {
-        return if (payPalUsername.isNullOrEmpty()) {
-            SignUpError.mustFillPayPalUsernameField(application)
-        } else {
-            SignUpError.none(application)
         }
     }
 }
@@ -183,12 +130,16 @@ data class SignUpStepThreeFields(
 }
 
 @Parcelize
-data class SignUpStepFourFields(
+data class SignUpFields(
+    var fullName: String? = null,
+    var username: String? = null,
+    var email: String? = null,
+    var password: String? = null,
     var dateOfBirth: Calendar? = null
 ): Parcelable {
-    class SignUpStepFourError {
+    class SignUpError {
         companion object {
-            fun mustBe18OrOlder(application: Application): String {
+            fun mustBe14OrOlder(application: Application): String {
                 return application.getString(R.string.you_should_be_at_least_18_years_old)
             }
             fun none(application: Application): String {
@@ -200,9 +151,37 @@ data class SignUpStepFourFields(
     fun isValidForSubmission(application: Application): String {
         val currentDate: Calendar = Calendar.getInstance()
         return if (currentDate.get(Calendar.YEAR) - dateOfBirth?.get(Calendar.YEAR)!! < 18) {
-            SignUpStepFourError.mustBe18OrOlder(application)
+            SignUpError.mustBe14OrOlder(application)
         } else {
-            SignUpStepFourError.none(application)
+            SignUpError.none(application)
+        }
+    }
+}
+
+@Parcelize
+data class ChangeEmailAddressFields(
+    var changeEmailAddressEmail: String? = null,
+    var changeEmailAddressPassword: String? = null
+): Parcelable {
+    class ChangeEmailAddressError {
+        companion object {
+            fun mustFillEmailField(application: Application): String {
+                return application.getString(R.string.change_email_address_fragment_error_empty_email_field)
+            }
+            fun mustFillPasswordField(application: Application): String {
+                return application.getString(R.string.change_email_address_fragment_error_empty_password_field)
+            }
+            fun none(application: Application): String {
+                return application.getString(R.string.error_none)
+            }
+        }
+    }
+
+    fun isValidForSubmission(application: Application): String {
+        return when {
+            changeEmailAddressEmail.isNullOrEmpty() -> ChangeEmailAddressError.mustFillEmailField(application)
+            changeEmailAddressPassword.isNullOrEmpty() -> ChangeEmailAddressError.mustFillPasswordField(application)
+            else -> ChangeEmailAddressError.none(application)
         }
     }
 }

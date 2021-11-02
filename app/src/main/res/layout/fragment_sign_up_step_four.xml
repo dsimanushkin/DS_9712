@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Background -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/auth_screen_background"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <!-- Main content -->
+
+    <RelativeLayout
+        android:id="@+id/sign_up_dob_page_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/sign_up_dob_page_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/sign_up_dob_page_back_button"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="4dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                tools:ignore="ContentDescription" />
+
+            <ProgressBar
+                android:id="@+id/sign_up_dob_page_loading_progress_bar"
+                android:layout_width="20dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:visibility="invisible"
+                android:layout_alignParentEnd="true"
+                android:indeterminateDrawable="@drawable/progress_bar"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sign_up_dob_page_toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_up_step_four_fragment_title"
+                    android:textSize="40sp"
+                    android:fontFamily="@font/vt323_regular"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_up_step_four_fragment_description"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/vt323_regular"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="26dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/vt323_regular"
+                        android:text="@string/sign_up_step_four_fragment_date_picker_title_text"
+                        android:layout_marginBottom="18dp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <TextView
+                        android:id="@+id/sign_up_dob_datepicker_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="38sp"
+                        android:text="September 30, 2002"
+                        android:fontFamily="@font/vt323_regular"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="20dp"
+                        tools:ignore="HardcodedText" />
+
+                    <DatePicker
+                        android:id="@+id/sign_up_dob_datepicker"
+                        android:theme="@style/NumberPickerStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:datePickerMode="spinner"
+                        android:calendarViewShown="false"
+                        android:layout_gravity="center_horizontal"
+                        android:minDate="01/01/1900" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sign_up_dob_page_next_button"
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/auth_border_button_style"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_up_step_four_fragment_next_text_button"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/vt323_regular"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

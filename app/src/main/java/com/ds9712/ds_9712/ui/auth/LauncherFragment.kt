@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.ds9712.ds_9712.BaseApplication
+import com.ds9712.ds_9712.R
 import com.ds9712.ds_9712.databinding.FragmentLauncherBinding
 import com.ds9712.ds_9712.di.auth.AuthScope
 import com.ds9712.ds_9712.ui.intro.IntroActivity
@@ -92,19 +94,19 @@ constructor(
     }
 
     private fun navLogin() {
-//        findNavController().navigate(R.id.action_launcherFragment_to_loginFragment)
+        findNavController().navigate(R.id.action_launcherFragment_to_loginFragment)
     }
 
     private fun navSignUp() {
-//        findNavController().navigate(R.id.action_launcherFragment_to_signUpStepOneFragment)
+        findNavController().navigate(R.id.action_launcherFragment_to_signUpStepOneFragment)
     }
 
     private fun navAgreement() {
-//        findNavController().navigate(R.id.action_launcherFragment_to_agreementFragment)
+        findNavController().navigate(R.id.action_launcherFragment_to_agreementFragment)
     }
 
     private fun navVerifyEmail() {
-//        findNavController().navigate(R.id.action_launcherFragment_to_verifyEmailFragment)
+        findNavController().navigate(R.id.action_launcherFragment_to_verifyEmailFragment)
     }
 
     private fun navIntroActivity() {

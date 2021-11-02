@@ -29,5 +29,10 @@
 
     <color name="dark_text_color">#686868</color>
 
-    <color name="edit_text_highlight_color">#26363A46</color>
+    <color name="edit_text_highlight_color">#26FFFFFF</color>
+
+    <color name="verify_email_number_input_background">#26BCBCBC</color>
+
+    <color name="intro_dot_active">#FFFFFF</color>
+    <color name="intro_dot_inactive">#33FFFFFF</color>
 </resources>

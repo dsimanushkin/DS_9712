@@ -1,6 +1,7 @@
 package com.ds9712.ds_9712.ui.auth
 
 import com.ds9712.ds_9712.di.auth.AuthScope
+import com.ds9712.ds_9712.models.AccountStatus
 import com.ds9712.ds_9712.models.AuthToken
 import com.ds9712.ds_9712.repository.auth.AuthRepository
 import com.ds9712.ds_9712.session.SessionManager
@@ -29,29 +30,53 @@ constructor(
         data.authToken?.let { authToken ->
             setAuthToken(authToken)
         }
+        data.accountStatus?.let { accountStatus ->
+            setAccountStatus(accountStatus)
+        }
     }
 
     override fun setStateEvent(stateEvent: StateEvent) {
         sessionManager.cachedToken.value?.let { authToken ->
             val job2: Flow<DataState<AuthViewState>> = when(stateEvent) {
-//                is AuthStateEvent.AccountStatusEvent -> {
-//                    authRepository.accountStatus(
-//                        stateEvent = stateEvent,
-//                        authToken = authToken
-//                    )
-//                }
-//                is AuthStateEvent.AcceptAgreementEvent -> {
-//                    authRepository.acceptAgreement(
-//                        stateEvent = stateEvent,
-//                        authToken = authToken
-//                    )
-//                }
-//                is AuthStateEvent.DeclineAgreementEvent -> {
-//                    authRepository.declineAgreement(
-//                        stateEvent = stateEvent,
-//                        authToken = authToken
-//                    )
-//                }
+                is AuthStateEvent.AccountStatusEvent -> {
+                    authRepository.accountStatus(
+                        stateEvent = stateEvent,
+                        authToken = authToken
+                    )
+                }
+                is AuthStateEvent.AcceptAgreementEvent -> {
+                    authRepository.acceptAgreement(
+                        stateEvent = stateEvent,
+                        authToken = authToken
+                    )
+                }
+                is AuthStateEvent.DeclineAgreementEvent -> {
+                    authRepository.declineAgreement(
+                        stateEvent = stateEvent,
+                        authToken = authToken
+                    )
+                }
+                is AuthStateEvent.VerifyEmailEvent -> {
+                    authRepository.verifyEmail(
+                        stateEvent = stateEvent,
+                        authToken = authToken,
+                        verificationCode = stateEvent.verificationCode
+                    )
+                }
+                is AuthStateEvent.ResendVerificationCodeEvent -> {
+                    authRepository.resendVerificationCode(
+                        stateEvent = stateEvent,
+                        authToken = authToken
+                    )
+                }
+                is AuthStateEvent.ChangeEmailAddressEvent -> {
+                    authRepository.changeEmailAddress(
+                        stateEvent = stateEvent,
+                        authToken = authToken,
+                        email = stateEvent.email,
+                        password = stateEvent.password
+                    )
+                }
                 else -> {
                     flow {
                         emit(
@@ -71,59 +96,46 @@ constructor(
         }
 
         val job: Flow<DataState<AuthViewState>> = when(stateEvent) {
-//            is AuthStateEvent.CheckPreviousAuthEvent -> {
-//                authRepository.checkPreviousAuthUser(stateEvent)
-//            }
-//            is AuthStateEvent.LoginEvent -> {
-//                authRepository.login(
-//                    stateEvent = stateEvent,
-//                    username = stateEvent.username,
-//                    password = stateEvent.password
-//                )
-//            }
-//            is AuthStateEvent.ValidateSignUpStepOneFieldsEvent -> {
-//                authRepository.validateSignUpStepOneFields(
-//                    stateEvent = stateEvent,
-//                    fullName = stateEvent.fullName,
-//                    username = stateEvent.username
-//                )
-//            }
-//            is AuthStateEvent.ValidateSignUpStepTwoFieldsEvent -> {
-//                authRepository.validateSignUpStepTwoFields(
-//                    stateEvent = stateEvent,
-//                    email = stateEvent.email
-//                )
-//            }
-//            is AuthStateEvent.ValidateSignUpStepThreeEvent -> {
-//                authRepository.validateSignUpStepThreeFields(
-//                    stateEvent = stateEvent,
-//                    password = stateEvent.password,
-//                    confirmPassword = stateEvent.confirmPassword
-//                )
-//            }
-//            is AuthStateEvent.ValidateSignUpStepFourEvent -> {
-//                authRepository.validateSignUpStepFourFields(
-//                    stateEvent = stateEvent,
-//                    dateOfBirth = stateEvent.dateOfBirth
-//                )
-//            }
-//            is AuthStateEvent.SignUpEvent -> {
-//                authRepository.signUp(
-//                    stateEvent = stateEvent,
-//                    fullName = stateEvent.fullName,
-//                    username = stateEvent.username,
-//                    email = stateEvent.email,
-//                    password = stateEvent.password,
-//                    dateOfBirth = stateEvent.dateOfBirth,
-//                    payPalUsername = stateEvent.payPalUsername
-//                )
-//            }
-//            is AuthStateEvent.ResetAccountPasswordEvent -> {
-//                authRepository.resetAccountPassword(
-//                    stateEvent = stateEvent,
-//                    username = stateEvent.username
-//                )
-//            }
+            is AuthStateEvent.CheckPreviousAuthEvent -> {
+                authRepository.checkPreviousAuthUser(stateEvent)
+            }
+            is AuthStateEvent.LoginEvent -> {
+                authRepository.login(
+                    stateEvent = stateEvent,
+                    username = stateEvent.username,
+                    password = stateEvent.password
+                )
+            }
+            is AuthStateEvent.ValidateSignUpStepOneFieldsEvent -> {
+                authRepository.validateSignUpStepOneFields(
+                    stateEvent = stateEvent,
+                    fullName = stateEvent.fullName,
+                    username = stateEvent.username
+                )
+            }
+            is AuthStateEvent.ValidateSignUpStepTwoFieldsEvent -> {
+                authRepository.validateSignUpStepTwoFields(
+                    stateEvent = stateEvent,
+                    email = stateEvent.email
+                )
+            }
+            is AuthStateEvent.ValidateSignUpStepThreeEvent -> {
+                authRepository.validateSignUpStepThreeFields(
+                    stateEvent = stateEvent,
+                    password = stateEvent.password,
+                    confirmPassword = stateEvent.confirmPassword
+                )
+            }
+            is AuthStateEvent.SignUpEvent -> {
+                authRepository.signUp(
+                    stateEvent = stateEvent,
+                    fullName = stateEvent.fullName,
+                    username = stateEvent.username,
+                    email = stateEvent.email,
+                    password = stateEvent.password,
+                    dateOfBirth = stateEvent.dateOfBirth
+                )
+            }
             else -> {
                 flow {
                     emit(
@@ -181,15 +193,6 @@ constructor(
         setViewState(update)
     }
 
-    fun setForgotPasswordFields(forgotPasswordFields: ForgotPasswordFields) {
-        val update = getCurrentViewStateOrNew()
-        if (update.forgotPasswordFields == forgotPasswordFields) {
-            return
-        }
-        update.forgotPasswordFields = forgotPasswordFields
-        setViewState(update)
-    }
-
     fun setSignUpStepTwoFields(signUpStepTwoFields: SignUpStepTwoFields) {
         val update = getCurrentViewStateOrNew()
         if (update.signUpStepTwoFields == signUpStepTwoFields) {
@@ -208,21 +211,30 @@ constructor(
         setViewState(update)
     }
 
-    fun setSignUpStepFourFields(signUpStepFourFields: SignUpStepFourFields) {
-        val update = getCurrentViewStateOrNew()
-        if (update.signUpStepFourFields == signUpStepFourFields) {
-            return
-        }
-        update.signUpStepFourFields = signUpStepFourFields
-        setViewState(update)
-    }
-
-    fun setSignUpStepFiveFields(signUpFields: SignUpFields) {
+    fun setSignUpStepFourFields(signUpFields: SignUpFields) {
         val update = getCurrentViewStateOrNew()
         if (update.signUpFields == signUpFields) {
             return
         }
         update.signUpFields = signUpFields
+        setViewState(update)
+    }
+
+    fun setChangeEmailAddressFields(changeEmailAddressFields: ChangeEmailAddressFields) {
+        val update = getCurrentViewStateOrNew()
+        if (update.changeEmailAddressFields == changeEmailAddressFields) {
+            return
+        }
+        update.changeEmailAddressFields = changeEmailAddressFields
+        setViewState(update)
+    }
+
+    private fun setAccountStatus(accountStatus: AccountStatus) {
+        val update = getCurrentViewStateOrNew()
+        if (update.accountStatus == accountStatus) {
+            return
+        }
+        update.accountStatus = accountStatus
         setViewState(update)
     }
 

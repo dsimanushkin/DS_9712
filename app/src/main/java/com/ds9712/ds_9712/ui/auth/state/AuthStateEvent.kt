@@ -38,18 +38,6 @@ sealed class AuthStateEvent: StateEvent {
         }
     }
 
-    data class ResetAccountPasswordEvent(
-        val username: String
-    ): AuthStateEvent() {
-        override fun errorInfo(): String {
-            return "Error resetting account password."
-        }
-
-        override fun toString(): String {
-            return "ResetAccountPasswordEvent"
-        }
-    }
-
     data class ValidateSignUpStepOneFieldsEvent(
         val fullName: String,
         val username: String
@@ -88,25 +76,12 @@ sealed class AuthStateEvent: StateEvent {
         }
     }
 
-    data class ValidateSignUpStepFourEvent(
-        val dateOfBirth: Calendar
-    ): AuthStateEvent() {
-        override fun errorInfo(): String {
-            return "Failed to validate fields for sign up step four."
-        }
-
-        override fun toString(): String {
-            return "ValidateSignUpStepFourEvent"
-        }
-    }
-
     data class SignUpEvent(
         val fullName: String,
         val username: String,
         val email: String,
         val password: String,
-        val dateOfBirth: Calendar,
-        val payPalUsername: String
+        val dateOfBirth: Calendar
     ): AuthStateEvent() {
         override fun errorInfo(): String {
             return "Failed to sign up user."
@@ -134,6 +109,41 @@ sealed class AuthStateEvent: StateEvent {
 
         override fun toString(): String {
             return "DeclineAgreementEvent"
+        }
+    }
+
+    data class VerifyEmailEvent(
+        val verificationCode: String
+    ): AuthStateEvent() {
+        override fun errorInfo(): String {
+            return "Error verifying email."
+        }
+
+        override fun toString(): String {
+            return "VerifyEmailEvent"
+        }
+    }
+
+    object ResendVerificationCodeEvent: AuthStateEvent() {
+        override fun errorInfo(): String {
+            return "Error resending verification code."
+        }
+
+        override fun toString(): String {
+            return "ResendVerificationCodeEvent"
+        }
+    }
+
+    data class ChangeEmailAddressEvent(
+        val email: String,
+        val password: String
+    ): AuthStateEvent() {
+        override fun errorInfo(): String {
+            return "Error changing email address."
+        }
+
+        override fun toString(): String {
+            return "ChangeEmailAddressEvent"
         }
     }
 }

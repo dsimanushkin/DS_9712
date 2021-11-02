@@ -68,71 +68,70 @@ class ErrorHandling {
             // 5002 - Record not found.
 
             return when(statusCode) {
-//                1001 -> application.getString(R.string.full_name_is_required)
-//                1002 -> application.getString(R.string.full_name_field_is_too_short)
-//                1003 -> application.getString(R.string.full_name_field_is_too_long)
-//
-//                1011 -> application.getString(R.string.username_is_required)
-//                1012 -> application.getString(R.string.this_username_already_in_use)
-//                1013 -> application.getString(R.string.username_field_is_too_short)
-//                1014 -> application.getString(R.string.username_field_is_too_long)
-//                1015 -> application.getString(R.string.username_is_available)
-//
-//                1021 -> application.getString(R.string.email_is_required)
-//                1022 -> application.getString(R.string.this_email_already_in_use)
-//                1023 -> application.getString(R.string.invalid_email_format)
-//                1024 -> application.getString(R.string.email_is_available)
-//
-//                1031 -> application.getString(R.string.password_field_required)
-//                1032 -> application.getString(R.string.password_is_too_short)
-//                1033 -> application.getString(R.string.password_is_valid)
-//
-//                1041 -> application.getString(R.string.date_of_birth_field_required)
-//                1042 -> application.getString(R.string.you_should_be_at_least_14_years_old)
-//                1043 -> application.getString(R.string.date_of_birth_is_valid)
-//
-//                1044 -> application.getString(R.string.paypal_account_field_required)
-//
-//                1051 -> application.getString(R.string.paypal_account_field_required)
-//                1052 -> application.getString(R.string.paypal_account_field_is_valid)
-//
-//                2001 -> application.getString(R.string.successfully_registered_new_user)
-//                2002 -> application.getString(R.string.successfully_retrieved_account_properties)
-//                2003 -> application.getString(R.string.agreement_accepted_successfully_and_verification_code_sent)
-//                2004 -> application.getString(R.string.agreement_accepted_successfully_and_verification_code_not_sent)
-//                2005 -> application.getString(R.string.successfully_retrieved_account_verification_fields)
-//                2006 -> application.getString(R.string.account_deleted_successfully)
-//                2007 -> application.getString(R.string.error_deleting_account)
-//                2008 -> application.getString(R.string.verification_code_has_been_sent)
-//                2009 -> application.getString(R.string.unable_to_send_verification_email_due_to_reached_daily_limit)
-//                2010 -> application.getString(R.string.account_has_been_already_verified)
-//                2011 -> application.getString(R.string.account_with_this_credentials_not_found)
-//                2012 -> application.getString(R.string.user_successfully_signed_in)
-//                2013 -> application.getString(R.string.email_updated_successfully)
-//                2014 -> application.getString(R.string.password_is_incorrect)
-//                2015 -> application.getString(R.string.email_could_be_changed_only_once_a_day)
-//                2016 -> application.getString(R.string.agreement_has_already_been_accepted)
-//                2017 -> application.getString(R.string.email_changed_successfully_and_new_verification_code_has_been_sent)
-//                2018 -> application.getString(R.string.email_should_be_verified_before_resetting_password)
-//                2019 -> application.getString(R.string.reset_password_email_has_been_sent)
-//                2020 -> application.getString(R.string.unable_to_send_reset_password_email_due_to_reached_daily_limit)
-//                2021 -> application.getString(R.string.verification_code_is_valid)
-//                2022 -> application.getString(R.string.verification_code_is_invalid)
-//                2023 -> application.getString(R.string.verification_code_required)
-//                2024 -> application.getString(R.string.email_has_been_already_verified)
-//
-//                5001 -> application.getString(R.string.invalid_authorization_token)
-//                5002 -> application.getString(R.string.record_not_found)
-//
-//                9001 -> application.getString(R.string.unknown_error)
-//                9002 -> application.getString(R.string.generic_success)
-//                9003 -> application.getString(R.string.generic_error)
-//                9004 -> application.getString(R.string.error_save_auth_token)
-//                9005 -> application.getString(R.string.error_save_account_properties)
-//                9006 -> application.getString(R.string.response_check_previous_auth_user_done)
-//
-//                else -> application.getString(R.string.unknown_error)
-                else -> ""
+                1001 -> application.getString(R.string.full_name_is_required)
+                1002 -> application.getString(R.string.full_name_field_is_too_short)
+                1003 -> application.getString(R.string.full_name_field_is_too_long)
+
+                1011 -> application.getString(R.string.username_is_required)
+                1012 -> application.getString(R.string.this_username_already_in_use)
+                1013 -> application.getString(R.string.username_field_is_too_short)
+                1014 -> application.getString(R.string.username_field_is_too_long)
+                1015 -> application.getString(R.string.username_is_available)
+
+                1021 -> application.getString(R.string.email_is_required)
+                1022 -> application.getString(R.string.this_email_already_in_use)
+                1023 -> application.getString(R.string.invalid_email_format)
+                1024 -> application.getString(R.string.email_is_available)
+
+                1031 -> application.getString(R.string.password_field_required)
+                1032 -> application.getString(R.string.password_is_too_short)
+                1033 -> application.getString(R.string.password_is_valid)
+
+                1041 -> application.getString(R.string.date_of_birth_field_required)
+                1042 -> application.getString(R.string.you_should_be_at_least_18_years_old)
+                1043 -> application.getString(R.string.date_of_birth_is_valid)
+
+                1044 -> application.getString(R.string.paypal_account_field_required)
+
+                1051 -> application.getString(R.string.paypal_account_field_required)
+                1052 -> application.getString(R.string.paypal_account_field_is_valid)
+
+                2001 -> application.getString(R.string.successfully_registered_new_user)
+                2002 -> application.getString(R.string.successfully_retrieved_account_properties)
+                2003 -> application.getString(R.string.agreement_accepted_successfully_and_verification_code_sent)
+                2004 -> application.getString(R.string.agreement_accepted_successfully_and_verification_code_not_sent)
+                2005 -> application.getString(R.string.successfully_retrieved_account_verification_fields)
+                2006 -> application.getString(R.string.account_deleted_successfully)
+                2007 -> application.getString(R.string.error_deleting_account)
+                2008 -> application.getString(R.string.verification_code_has_been_sent)
+                2009 -> application.getString(R.string.unable_to_send_verification_email_due_to_reached_daily_limit)
+                2010 -> application.getString(R.string.account_has_been_already_verified)
+                2011 -> application.getString(R.string.account_with_this_credentials_not_found)
+                2012 -> application.getString(R.string.user_successfully_signed_in)
+                2013 -> application.getString(R.string.email_updated_successfully)
+                2014 -> application.getString(R.string.password_is_incorrect)
+                2015 -> application.getString(R.string.email_could_be_changed_only_once_a_day)
+                2016 -> application.getString(R.string.agreement_has_already_been_accepted)
+                2017 -> application.getString(R.string.email_changed_successfully_and_new_verification_code_has_been_sent)
+                2018 -> application.getString(R.string.email_should_be_verified_before_resetting_password)
+                2019 -> application.getString(R.string.reset_password_email_has_been_sent)
+                2020 -> application.getString(R.string.unable_to_send_reset_password_email_due_to_reached_daily_limit)
+                2021 -> application.getString(R.string.verification_code_is_valid)
+                2022 -> application.getString(R.string.verification_code_is_invalid)
+                2023 -> application.getString(R.string.verification_code_required)
+                2024 -> application.getString(R.string.email_has_been_already_verified)
+
+                5001 -> application.getString(R.string.invalid_authorization_token)
+                5002 -> application.getString(R.string.record_not_found)
+
+                9001 -> application.getString(R.string.unknown_error)
+                9002 -> application.getString(R.string.generic_success)
+                9003 -> application.getString(R.string.generic_error)
+                9004 -> application.getString(R.string.error_save_auth_token)
+                9005 -> application.getString(R.string.error_save_account_properties)
+                9006 -> application.getString(R.string.response_check_previous_auth_user_done)
+
+                else -> application.getString(R.string.unknown_error)
             }
         }
 
