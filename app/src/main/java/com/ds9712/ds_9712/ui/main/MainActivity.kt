@@ -8,12 +8,9 @@ import androidx.fragment.app.FragmentFactory
 import androidx.lifecycle.ViewModelProvider
 import com.ds9712.ds_9712.BaseApplication
 import com.ds9712.ds_9712.R
-import com.ds9712.ds_9712.databinding.ActivityAuthBinding
 import com.ds9712.ds_9712.databinding.ActivityMainBinding
-import com.ds9712.ds_9712.fragments.auth.AuthNavHostFragment
 import com.ds9712.ds_9712.fragments.main.MainNavHostFragment
 import com.ds9712.ds_9712.ui.BaseActivity
-import com.ds9712.ds_9712.ui.auth.AuthViewModel
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview

@@ -5,6 +5,8 @@
 
     <string name="error_none">None</string>
 
+    <string name="empty_placeholder">-</string>
+
     <!-- Launcher Fragment -->
     <string name="launcher_fragment_log_in_text_button">Log In</string>
     <string name="launcher_fragment_dont_have_an_account_text">You need an account, click \nhere to sign up.</string>
@@ -115,6 +117,22 @@
     <string name="intro_page_slide_5_description">But you need to prove that you are the one who deserves our attention</string>
     <string name="intro_page_slide_6_description">Get to the end first and you will find us!</string>
     <string name="intro_page_slide_6_signature">Goodluck, \nDS_9712</string>
+
+    <!-- Fragment Main -->
+    <string name="main_key_placeholder">Key</string>
+    <string name="main_submit_button_text">Submit</string>
+
+    <string name="main_error_no_internet_connection">No internet\nconnection</string>
+    <string name="main_error_unable_to_load_content">Unable to load\ncontent</string>
+    <string name="main_error_retry_button_text">Retry</string>
+
+    <string name="main_error_key_can_not_be_empty">Key can not be empty</string>
+    <string name="main_error_invalid_key">You entered an invalid key</string>
+
+    <!-- Final Fragment -->
+    <string name="final_fragment_text_1">Congratulations my friend,</string>
+    <string name="final_fragment_text_2">You were able to successfully solve everything we offered to you. It is time for you to meet us. Check your email, we will contact you shortly.</string>
+    <string name="final_fragment_text_3">Goodluck,\nDS_9712</string>
 
     <!-- Calendar Months -->
     <string-array name="months">

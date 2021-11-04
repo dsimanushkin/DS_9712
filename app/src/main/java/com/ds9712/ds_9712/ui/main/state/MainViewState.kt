@@ -1,24 +1,15 @@
 package com.ds9712.ds_9712.ui.main.state
 
-import android.app.Application
 import android.os.Parcelable
+import com.ds9712.ds_9712.models.CurrentQuestion
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class MainViewState(
-    var placegolderFields: PlaceholderFields? = null
-): Parcelable
-
-@Parcelize
-data class PlaceholderFields(
-    var loginUsername: String? = null,
-    var loginPassword: String? = null
+    var currentQuestionFields: CurrentQuestionFields = CurrentQuestionFields()
 ): Parcelable {
-    class LoginError {
-
-    }
-
-    fun isValidForSubmission(application: Application): String {
-        return ""
-    }
+    @Parcelize
+    data class CurrentQuestionFields(
+        var currentQuestion: CurrentQuestion? = null
+    ): Parcelable
 }
