@@ -87,7 +87,7 @@
 
     <!-- Privacy Policy Fragment -->
     <string name="privacy_policy_fragment_title">Privacy Policy</string>
-    <string name="privacy_policy_fragment_description">Last updated: April 2020</string>
+    <string name="privacy_policy_fragment_description">Last updated: November 2021</string>
 
     <!-- Verify Email Fragment (Auth) -->
     <string name="verify_email_fragment_title">Verify Email Address</string>

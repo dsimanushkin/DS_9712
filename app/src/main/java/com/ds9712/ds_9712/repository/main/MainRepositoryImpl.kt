@@ -3,7 +3,7 @@ package com.ds9712.ds_9712.repository.main
 import android.app.Application
 import android.content.SharedPreferences
 import com.ds9712.ds_9712.api.GenericResponse
-import com.ds9712.ds_9712.api.auth.response.CurrentQuestionResponse
+import com.ds9712.ds_9712.api.main.response.CurrentQuestionResponse
 import com.ds9712.ds_9712.api.main.DS9712MainService
 import com.ds9712.ds_9712.di.main.MainScope
 import com.ds9712.ds_9712.models.AuthToken
@@ -17,7 +17,6 @@ import com.ds9712.ds_9712.util.DataState
 import com.ds9712.ds_9712.util.ErrorHandling.Companion.handleErrors
 import com.ds9712.ds_9712.util.Response
 import com.ds9712.ds_9712.util.StateEvent
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.Flow

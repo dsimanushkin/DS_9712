@@ -2,7 +2,6 @@ package com.ds9712.ds_9712.repository.main
 
 import com.ds9712.ds_9712.di.main.MainScope
 import com.ds9712.ds_9712.models.AuthToken
-import com.ds9712.ds_9712.ui.auth.state.AuthViewState
 import com.ds9712.ds_9712.ui.main.state.MainViewState
 import com.ds9712.ds_9712.util.DataState
 import com.ds9712.ds_9712.util.StateEvent

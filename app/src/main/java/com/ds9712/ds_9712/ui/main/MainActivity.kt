@@ -11,6 +11,7 @@ import com.ds9712.ds_9712.R
 import com.ds9712.ds_9712.databinding.ActivityMainBinding
 import com.ds9712.ds_9712.fragments.main.MainNavHostFragment
 import com.ds9712.ds_9712.ui.BaseActivity
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
@@ -41,6 +42,8 @@ class MainActivity: BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        MobileAds.initialize(this@MainActivity)
 
         onRestoreInstanceState()
     }

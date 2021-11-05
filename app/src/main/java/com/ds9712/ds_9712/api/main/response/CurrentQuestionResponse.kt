@@ -1,4 +1,4 @@
-package com.ds9712.ds_9712.api.auth.response
+package com.ds9712.ds_9712.api.main.response
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

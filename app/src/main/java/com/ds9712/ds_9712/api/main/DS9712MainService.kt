@@ -1,7 +1,7 @@
 package com.ds9712.ds_9712.api.main
 
 import com.ds9712.ds_9712.api.GenericResponse
-import com.ds9712.ds_9712.api.auth.response.CurrentQuestionResponse
+import com.ds9712.ds_9712.api.main.response.CurrentQuestionResponse
 import com.ds9712.ds_9712.di.main.MainScope
 import com.ds9712.ds_9712.util.Constants
 import retrofit2.http.*

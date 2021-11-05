@@ -3,7 +3,6 @@ package com.ds9712.ds_9712.util
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import kotlinx.android.parcel.IgnoredOnParcel
-import timber.log.Timber
 import java.lang.IndexOutOfBoundsException
 
 class MessageStack: ArrayList<StateMessage>() {
@@ -39,7 +38,6 @@ class MessageStack: ArrayList<StateMessage>() {
             if (this.size > 0) {
                 setStateMessage(stateMessage = this[0])
             } else {
-                Timber.d("stack is empty: ")
                 setStateMessage(null)
             }
             return transaction

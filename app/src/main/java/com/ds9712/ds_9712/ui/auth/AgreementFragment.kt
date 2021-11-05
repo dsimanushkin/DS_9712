@@ -91,9 +91,6 @@ constructor(
                 uiCommunicationListener.displaySnackBarMessage(getString(R.string.no_internet_connection_description))
             }
         }
-        binding.agreementPageTermsOfUseButton.setOnClickListener {
-            navTermsOfUse()
-        }
         binding.agreementPrivacyPolicyButton.setOnClickListener {
             navPrivacyPolicy()
         }
@@ -150,10 +147,6 @@ constructor(
                 ""
             )
         )
-    }
-
-    private fun navTermsOfUse() {
-        findNavController().navigate(R.id.action_agreementFragment_to_termsOfUseFragment)
     }
 
     private fun navPrivacyPolicy() {

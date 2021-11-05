@@ -20,7 +20,6 @@ import javax.inject.Inject
 @ExperimentalCoroutinesApi
 @FlowPreview
 @MainScope
-//@OptIn(ExperimentalCoroutinesApi::class)
 class MainViewModel
 @Inject
 constructor(

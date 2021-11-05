@@ -18,6 +18,10 @@ import com.ds9712.ds_9712.di.main.MainScope
 import com.ds9712.ds_9712.models.CurrentQuestion
 import com.ds9712.ds_9712.ui.main.state.MainStateEvent
 import com.ds9712.ds_9712.util.ErrorHandling
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import javax.inject.Inject
@@ -31,6 +35,8 @@ constructor(
     viewModelFactory: ViewModelProvider.Factory
 ): BaseMainFragment(viewModelFactory) {
 
+    var mInterstitialAd: InterstitialAd? = null
+
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
@@ -43,7 +49,23 @@ constructor(
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
 
+        loadAd()
+
         return binding.root
+    }
+
+    private fun loadAd() {
+        val adRequest = AdRequest.Builder().build()
+
+        InterstitialAd.load(requireContext(),"ca-app-pub-2985711755904845/7673725941", adRequest, object : InterstitialAdLoadCallback() {
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                mInterstitialAd = null
+            }
+
+            override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                mInterstitialAd = interstitialAd
+            }
+        })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -91,9 +113,17 @@ constructor(
                                 callApiForCurrentQuestion()
                             }
                             1005 -> { // You entered an invalid key.
+                                if (mInterstitialAd != null) {
+                                    mInterstitialAd?.show(requireActivity())
+                                } else {
+                                    loadAd()
+                                }
+
                                 setErrorMessage(resources.getString(R.string.main_error_invalid_key))
                                 showMiniProgressBar(false)
+
                                 viewModel.clearStateMessage()
+                                loadAd()
                             }
                             else -> {
                                 showErrorMessage(resources.getString(R.string.main_error_unable_to_load_content))

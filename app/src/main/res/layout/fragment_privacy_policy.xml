@@ -111,7 +111,7 @@
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:fontFamily="@font/vt323_regular"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a blandit ligula. Aenean bibendum, dolor at finibus rutrum, enim nibh blandit neque, sit amet scelerisque eros est non tellus. Aenean orci velit, interdum quis enim posuere, porta fringilla lorem. In hac habitasse platea dictumst. Suspendisse fringilla diam dapibus sapien porttitor, et sagittis ligula vulputate. Aenean feugiat, erat ut congue blandit, risus ligula bibendum metus, ac condimentum felis sem nec nisi. Pellentesque laoreet tellus arcu, sed auctor massa pulvinar vel. Suspendisse condimentum scelerisque rutrum. Morbi vehicula a ante vitae porta. Curabitur sagittis lacus cursus enim consequat porttitor. Donec sit amet dictum odio, ac semper nibh."
+                        android:text="When you interact with our app, we collect information that you provide to us. For example, we require you to set up a DS_9712 account, so we need to collect a few important details about you, such as your name, username, password, email address, and date of birth. We will never collect your location or try to get access to your phonebook, messages, gallery and other private information. "
                         android:layout_marginBottom="20dp"
                         tools:ignore="HardcodedText" />
 
@@ -121,7 +121,7 @@
                         android:textColor="@color/white"
                         android:textSize="25sp"
                         android:fontFamily="@font/vt323_regular"
-                        android:text="Information we obtain from other sources"
+                        android:text="How we use information"
                         android:layout_marginBottom="10dp"
                         tools:ignore="HardcodedText" />
 
@@ -131,7 +131,47 @@
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:fontFamily="@font/vt323_regular"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a blandit ligula. Aenean bibendum, dolor at finibus rutrum, enim nibh blandit neque, sit amet scelerisque eros est non tellus. Aenean orci velit, interdum quis enim posuere, porta fringilla lorem. In hac habitasse platea dictumst. Suspendisse fringilla diam dapibus sapien porttitor, et sagittis ligula vulputate. Aenean feugiat, erat ut congue blandit, risus ligula bibendum metus, ac condimentum felis sem nec nisi. Pellentesque laoreet tellus arcu, sed auctor massa pulvinar vel. Suspendisse condimentum scelerisque rutrum. Morbi vehicula a ante vitae porta. Curabitur sagittis lacus cursus enim consequat porttitor. Donec sit amet dictum odio, ac semper nibh. Quisque finibus imperdiet erat id feugiat. Sed venenatis ornare commodo. Pellentesque ullamcorper velit et urna rhoncus aliquet. In lacinia tempus quam, ut bibendum sapien euismod nec. Donec tristique vitae neque dignissim vestibulum. Pellentesque at arcu nibh. Quisque ornare nisi vitae nisi dignissim cursus. \n \nAenean congue urna non congue lacinia. Aenean elementum lectus fringilla luctus fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec a sodales est. Vivamus eu metus id diam mattis vulputate eu vel mauris. Pellentesque egestas mi in ex maximus vulputate. Vivamus venenatis sem erat, vitae gravida purus malesuada eu. Mauris eros elit, pharetra non euismod et, ullamcorper quis elit. In efficitur sed libero eu tincidunt. In vel mauris a lorem scelerisque pharetra at sed leo. Nam eleifend maximus vestibulum. Sed at arcu quis neque dictum rhoncus. Aenean ullamcorper nulla in odio ullamcorper, at porttitor nulla mattis."
+                        android:text="Collected information is used to identify you as a real user and verify that you are eligible to use our application. "
+                        android:layout_marginBottom="25dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/vt323_regular"
+                        android:text="Ads"
+                        android:layout_marginBottom="10dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/vt323_regular"
+                        android:text="This app is 100% free and we will never ask to pay for anything while you using it. To be able to provide final rewards for our users we have to use ads in our app."
+                        android:layout_marginBottom="25dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/vt323_regular"
+                        android:text="Other"
+                        android:layout_marginBottom="10dp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/vt323_regular"
+                        android:text="Your information stays with us and only with us, forever. We never share your personal data to a third parties. We will never use your email to send a promotional emails and other spam. Users that are younger than 18 years old are not permitted in our system and accounts that will be created in order to avoid this restrictions will be terminated. "
                         android:layout_marginBottom="25dp"
                         tools:ignore="HardcodedText" />
 

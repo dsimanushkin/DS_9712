@@ -52,7 +52,6 @@ constructor(
     private fun subscribeObservers() {
         viewModel.viewState.observe(viewLifecycleOwner, Observer {viewState ->
             viewState.accountStatus?.let { accountStatusResponse ->
-                println("Launcher Fragment: $accountStatusResponse")
                 if (accountStatusResponse.agreementAccepted) {
                     if (accountStatusResponse.emailConfirmed) {
                         if (sharedPreferences.getBoolean("showIntro", true)) {

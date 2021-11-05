@@ -9,9 +9,8 @@ import com.ds9712.ds_9712.models.AuthToken
 abstract class AppDatabase: RoomDatabase() {
     abstract fun getAuthTokenDao(): AuthTokenDao
     abstract fun getAccountPropertiesDao(): AccountPropertiesDao
-//    abstract fun getBlogPostDao(): BlogPostDao
 
     companion object {
-        const val DATABASE_NAME = "kyrie_app_db"
+        const val DATABASE_NAME = "ds9712_app_db"
     }
 }

@@ -88,17 +88,6 @@
                     android:textAlignment="center"/>
 
                 <TextView
-                    android:id="@+id/agreement_page_terms_of_use_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/vt323_regular"
-                    android:textColor="@color/white"
-                    android:text="@string/agreement_fragment_terms_of_use_text_button"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="35dp"/>
-
-                <TextView
                     android:id="@+id/agreement_privacy_policy_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -10,7 +10,6 @@ import com.ds9712.ds_9712.util.StateMessage
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.Flow
-import timber.log.Timber
 
 @FlowPreview
 @ExperimentalCoroutinesApi
@@ -55,7 +54,6 @@ abstract class BaseViewModel<ViewState>: ViewModel() {
     }
 
     fun isJobAlreadyActive(stateEvent: StateEvent): Boolean {
-        Timber.d("isJobAlreadyActive?: ${dataChannelManager.isJobAlreadyActive(stateEvent)}")
         return dataChannelManager.isJobAlreadyActive(stateEvent)
     }
 
@@ -73,7 +71,6 @@ abstract class BaseViewModel<ViewState>: ViewModel() {
 
     open fun cancelActiveJobs() {
         if (areAnyJobsActive()) {
-            Timber.d("cancel active jobs: ${dataChannelManager.numActiveJobs.value ?: 0}")
             dataChannelManager.cancelJobs()
         }
     }

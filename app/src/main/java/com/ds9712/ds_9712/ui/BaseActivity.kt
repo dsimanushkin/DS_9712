@@ -46,11 +46,5 @@ abstract class BaseActivity : AppCompatActivity(), UICommunicationListener {
         response: Response,
         stateMessageCallback: StateMessageCallback
     ) {
-//        when(response.uiComponentType) {
-//            is UIComponentType.None -> {
-//                Timber.d("onResponseReceived: ${response.message}")
-//                stateMessageCallback.removeMessageFromStack()
-//            }
-//        }
     }
 }
